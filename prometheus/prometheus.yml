@@ -19,12 +19,11 @@ rule_files:
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
 scrape_configs:
-  - job_name: 'cadvisor'                                                   
-    scrape_interval: 1m                                                    
+  - job_name: 'cadvisor'
+    scrape_interval: 1m
     scrape_timeout:  1m
-    metrics_path: /cadvisor/metrics                                                 
     static_configs:
-      - targets: ['cadvisor:8080'] 
+      - targets: ['cadvisor:8080']
   
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: 'prometheus'

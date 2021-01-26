@@ -1,5 +1,6 @@
 docker rm -f portainer
-CMD_RUN="docker run --name portainer --network monitoring_net -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v PORTAINER_DATA_VOLUME:/data portainer/portainer-ce"        
+#CMD_RUN="docker run --name portainer --network monitoring_net -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock:ro -v PORTAINER_DATA_VOLUME:/data portainer/portainer:linux-s390x-1.23.1"
+CMD_RUN="docker run --name portainer --network monitoring_net -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock:ro -v PORTAINER_DATA_VOLUME:/data portainer/portainer:linux-s390x-1.23.1"
 echo Running Portainer with: $CMD_RUN
 $CMD_RUN
 
