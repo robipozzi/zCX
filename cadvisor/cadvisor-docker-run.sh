@@ -1,5 +1,7 @@
 docker rm -f cadvisor
 CMD_RUN="docker run --name cadvisor --network monitoring_net -d -v /:/rootfs:ro -v /var/run:/var/run:ro -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -v /dev/disk/:/dev/disk:ro ibmcom/cadvisor-s390x:0.33.0"
+## zCX new version
+#CMD_RUN="docker run --name cadvisor --network monitoring_net -d -v /media:/rootfs/media:ro -v /var/run/docker.sock:/var/run/docker.sock:ro -v /sys:/sys:ro -v /var/lib/docker/:/var/lib/docker:ro -v /dev/disk/:/dev/disk:ro ibmcom/cadvisor-s390x:0.33.0"
 echo Running Cadvisor with: $CMD_RUN
 $CMD_RUN
 
