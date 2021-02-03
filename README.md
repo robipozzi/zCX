@@ -44,7 +44,7 @@ For some component there is the need to build custom images:
         Prometheus custom image
         Node Exporter custom image
 
-1. Build Nginx custom Docker image
+1) Build Nginx custom Docker image
 
 **[nginx-docker-build.sh](nginx/nginx-docker-build.sh)**
 - run **nginx-docker-build.sh** script to build a custom Nginx image
