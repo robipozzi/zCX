@@ -68,7 +68,7 @@ The script delegates to other component specific scripts, which are run in an or
 ## Nginx
 [Nginx](https://www.nginx.com/) is a free, open source HTTP web server, mail proxy server, reverse proxy and load balancer for HTTP, TCP and UDP traffic.
 
-Nginx behavior is defined in a specific configuration file named **[default.conf](default.conf)**, that is copied to the Docker image when it is built.
+Nginx behavior is defined in a specific configuration file named **[default.conf](nginx/default.conf)**, that is copied to the Docker image when it is built.
 
 ## Grafana
 [Grafana](https://grafana.com/) is an open-source platform for data visualization, monitoring and analysis that has become quite popular as a tool for Observability, allowing to query, visualize, alert on and understand environment metrics no matter where they are stored.
