@@ -30,7 +30,7 @@ To setup and run the whole stack you need to go through the following steps in t
 - [Run containers](#run-containers)
 
 ### Create prerequisites
-Run [setup.sh](setup.sh) **setup.sh(script.sh)** script to create the following prerequisites:
+Run **[setup.sh]**(setup.sh) script to create the following prerequisites:
 
 - 1 Docker Network **ingress_net**
 - 1 Docker Network **monitoring_net**
