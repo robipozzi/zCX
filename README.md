@@ -39,7 +39,7 @@ Run **[setup.sh](setup.sh)** script to create the following prerequisites:
 - 1 Docker Volume **PORTAINER_DATA_VOLUME** used by Portainer container to persist its own data
 
 ### Build custom images
-For some component, custom Docker image needs to be built, appropriate Dockerfile and convenient scripts are provided for the purpose
+For some component, custom Docker image needs to be built; appropriate Dockerfile and convenient scripts are provided for the purpose.
 
 **Build Nginx custom Docker image**
 
