@@ -25,9 +25,9 @@ Node Exporter does not have a relevant UI and for this reason runs in the backen
 
 ## Setup and run the environment
 To setup and run the whole stack you need to go through the following steps in the right order: 
-- [Create prerequisites](#create-prerequisites): this is to be done just the first time you setuo the environment
+- [Create prerequisites](#create-prerequisites): this is to be done just the first time you setup the environment
 - [Build custom images](#build-custom-images): run this step whenever you need to make some change to the images
-- [Run the stack](#run-the-stack): this is the step that actually start and run all the components as containers
+- [Run the stack](#run-the-stack): this is the step that actually starts and runs all the components as containers
 
 ### Create prerequisites
 Run **[setup.sh](setup.sh)** script to create the following prerequisites:
