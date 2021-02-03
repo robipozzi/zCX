@@ -24,19 +24,21 @@ Nginx runs as a container and is configured as a Reverse Proxy, with several *pr
 Nodeexporter does not have a relevant UI and for this reason runs in the backend and is not exposed through Nginx (see [Nodeexport](#nodeexport) paragraph for more details).
 
 ## Setup and run the environment
-[Create prerequisites](#create-prerequisites)
-To run the environment there are few prerequisites that must be met:
+To setup and run the whole stack you need to go through the following steps in the right order: 
+- [Create prerequisites](#create-prerequisites)
+- [Build custom images](#build-custom-images)
+
+### Create prerequisites
+Run **setup.sh** script to create the following prerequisites:
+
 - 1 Docker Network **ingress_net**
 - 1 Docker Network **monitoring_net**
 - 1 Docker Volume **GRAFANA_DATA_VOLUME** used by Grafana container to persist its own data
 - 1 Docker Volume **PROMETHEUS_DATA_VOLUME** used by Prometheus container to persist its own data
 - 1 Docker Volume **PORTAINER_DATA_VOLUME** used by Portainer container to persist its own data
 
-### 1. Create prerequisites
-Run **setup.sh** script to create the prerequisites
-
-### 2. Build custom images
-Build Nginx custom Docker image
+### Build custom images
+1. Build Nginx custom Docker image
 
 - run **nginx-docker-build.sh** script to build a custom Nginx image
 
