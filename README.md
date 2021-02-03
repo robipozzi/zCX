@@ -44,15 +44,17 @@ For some component there is the need to build custom images:
         Prometheus custom image
         Node Exporter custom image
 
-1. Build Nginx custom Docker image
-Change to *nginx* folder and run **[nginx-docker-build.sh](nginx/nginx-docker-build.sh)** script to build a custom Nginx image. The images is built using this **[Dockerfile](nginx/Dockerfile)**
+**Build Nginx custom Docker image**
 
-2. Build Prometheus custom Docker image
-Change to *prometheus* folder and run **[prometheus-docker-build.sh](prometheus/prometheus-docker-build.sh)** script to build a custom Prometheus image. The images is built using this **[Dockerfile](prometheus/Dockerfile)**
+Change to *nginx* folder and run **[nginx-docker-build.sh](nginx/nginx-docker-build.sh)** script to build a custom Nginx image. The image is built using this **[Dockerfile](nginx/Dockerfile)**.
 
-3. Build Node Exporter custom Docker image
+**Build Prometheus custom Docker image**
 
-- run **nginx-docker-build.sh** script to build a custom Nginx image
+Change to *prometheus* folder and run **[prometheus-docker-build.sh](prometheus/prometheus-docker-build.sh)** script to build a custom Prometheus image. The image is built using this **[Dockerfile](prometheus/Dockerfile)**.
+
+**Build Node Exporter custom Docker image**
+
+Change to *nodeexporter* folder and run **[nodeexporter-docker-build.sh](nodeexporter/nodeexporter-docker-build.sh)** script to build a custom Node Exporter image. The image is built using this **[Dockerfile](nodeexporter/Dockerfile)**.
 
 ### Run containers
 Execute **run.sh** script to start up all the components. The script delegates to other component specific scripts, ran in an ordered manner. 
