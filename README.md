@@ -27,7 +27,7 @@ Nodeexporter does not have a relevant UI and for this reason runs in the backend
 To setup and run the whole stack you need to go through the following steps in the right order: 
 - [Create prerequisites](#create-prerequisites): this is to be done just the first time you setuo the environment
 - [Build custom images](#build-custom-images): run this step whenever you need to make some change to the images
-- [Run containers](#run-containers)
+- [Run the stack](#run-the-stack)
 
 ### Create prerequisites
 Run **[setup.sh](setup.sh)** script to create the following prerequisites:
@@ -56,9 +56,17 @@ Change to *prometheus* folder and run **[prometheus-docker-build.sh](prometheus/
 
 Change to *nodeexporter* folder and run **[nodeexporter-docker-build.sh](nodeexporter/nodeexporter-docker-build.sh)** script to build a custom Node Exporter image. The image is built using this **[Dockerfile](nodeexporter/Dockerfile)**.
 
-### Run containers
-Execute **run.sh** script to start up all the components. The script delegates to other component specific scripts, ran in an ordered manner. 
-      Once you have built these custom images, you can run the script that will start up the whole stack at once in the correct order, as can be seen below.
+### Run the stack
+Once you have created the prerequisites and built all the needed custom images, the **[run.sh](run.sh)** script can be run to start up all the components of the stack as containers. 
+
+The script delegates to other component specific scripts, which are run in an ordered manner.
+
+- Node Exporter is run with **[nodeexporter-docker-run.sh](nodeexporter/nodeexporter-docker-run.sh)** script
+- cAdvisor is run with **[cadvisor-docker-run.sh](cadvisor/cadvisor-docker-run.sh)** script
+- Prometheus is run with **[prometheus-docker-run.sh](prometheus/prometheus-docker-run.sh)** script
+- Grafana is run with **[grafana-docker-run.sh](grafana/grafana-docker-run.sh)** script
+- Portainer is run with **[portainer-docker-run.sh](portainer/portainer-docker-run.sh)** script
+- Nginx is run with **[nginx-docker-run.sh](nginx/nginx-docker-run.sh)** script
 
 ## Nginx
 [TODO]
