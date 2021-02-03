@@ -25,8 +25,8 @@ Nodeexporter does not have a relevant UI and for this reason runs in the backend
 
 ## Setup and run the environment
 To setup and run the whole stack you need to go through the following steps in the right order: 
-- [Create prerequisites](#create-prerequisites)
-- [Build custom images](#build-custom-images)
+- [Create prerequisites](#create-prerequisites): this is to be done just the first time you setuo the environment
+- [Build custom images](#build-custom-images): run this step whenever you need to make some change to the images
 - [Run containers](#run-containers)
 
 ### Create prerequisites
@@ -46,6 +46,7 @@ For some component there is the need to build custom images:
 
 1. Build Nginx custom Docker image
 
+**[nginx-docker-build.sh](nginx/nginx-docker-build.sh)**
 - run **nginx-docker-build.sh** script to build a custom Nginx image
 
 2. Build Prometheus custom Docker image
