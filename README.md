@@ -24,6 +24,7 @@ Nginx runs as a container and is configured as a Reverse Proxy, with several *pr
 Nodeexporter does not have a relevant UI and for this reason runs in the backend and is not exposed through Nginx (see [Nodeexport](#nodeexport) paragraph for more details).
 
 ## Setup and run the environment
+[Create prerequisites](#create-prerequisites)
 To run the environment there are few prerequisites that must be met:
 - 1 Docker Network **ingress_net**
 - 1 Docker Network **monitoring_net**
@@ -35,7 +36,8 @@ To run the environment there are few prerequisites that must be met:
 Run **setup.sh** script to create the prerequisites
 
 ### 2. Build custom images
-Build the custom Docker image
+Build Nginx custom Docker image
+
 - run **nginx-docker-build.sh** script to build a custom Nginx image
 
 3. run **run.sh** script to start up all the components delegating to component specific scripts, ran in an ordered manner. Before running this script the first time, there is the need to build the following custom images (scripts and specific configurations are also provided and will be described in the following paragraphs):
