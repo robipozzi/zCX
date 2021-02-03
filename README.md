@@ -27,7 +27,7 @@ Nodeexporter does not have a relevant UI and for this reason runs in the backend
 To setup and run the whole stack you need to go through the following steps in the right order: 
 - [Create prerequisites](#create-prerequisites): this is to be done just the first time you setuo the environment
 - [Build custom images](#build-custom-images): run this step whenever you need to make some change to the images
-- [Run the stack](#run-the-stack)
+- [Run the stack](#run-the-stack): this is the step that actually start and run all the components as containers
 
 ### Create prerequisites
 Run **[setup.sh](setup.sh)** script to create the following prerequisites:
@@ -39,10 +39,7 @@ Run **[setup.sh](setup.sh)** script to create the following prerequisites:
 - 1 Docker Volume **PORTAINER_DATA_VOLUME** used by Portainer container to persist its own data
 
 ### Build custom images
-For some component there is the need to build custom images:
-        Nginx custom image
-        Prometheus custom image
-        Node Exporter custom image
+For some component, custom Docker image needs to be built, appropriate Dockerfile and convenient scripts are provided for the purpose
 
 **Build Nginx custom Docker image**
 
