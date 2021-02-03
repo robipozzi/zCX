@@ -4,7 +4,7 @@
 - [Nginx](#nginx)
 - [Grafana](#grafana)
 - [Prometheus](#prometheus)
-- [Cadvisor](#cadvisor)
+- [cAdvisor](#cadvisor)
 - [Node Exporter](#node-exporter)
 - [Portainer](#portainer)
 
@@ -18,7 +18,7 @@ All the tools are configured to run behind a Reverse Proxy, implemented with Ngi
 Nginx runs as a container and is configured as a Reverse Proxy, with several *proxy_pass* directives that redirect to the following components running behind the proxy (see [Nginx](#nginx) paragraph for more details):
 - [Grafana](#grafana)
 - [Prometheus](#prometheus)
-- [Cadvisor](#cadvisor)
+- [cAdvisor](#cadvisor)
 - [Portainer](#portainer)
 
 Node Exporter does not have a relevant UI and for this reason runs in the backend and is not exposed through Nginx (see [Node Exporter](#node-exporter) paragraph for more details).
@@ -76,7 +76,7 @@ Nginx behavior is defined in a specific configuration file named **[default.conf
 ## Prometheus
 [Prometheus](https://prometheus.io/) is an open-source system monitoring and alerting toolkit. It is configured via **[prometheus.yml](prometheus/prometheus.yml)** specific configuration file that is copied to the Docker image when it is built.
 
-## Cadvisor
+## cAdvisor
 [cAdvisor](https://github.com/google/cadvisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics.
 
 ## Node Exporter
