@@ -5,7 +5,7 @@
 - [Grafana](#grafana)
 - [Prometheus](#prometheus)
 - [Cadvisor](#cadvisor)
-- [Nodeexport](#nodeexport)
+- [Node Exporter](#node-exporter)
 - [Portainer](#portainer)
 
 ## Introduction
@@ -21,7 +21,7 @@ Nginx runs as a container and is configured as a Reverse Proxy, with several *pr
 - [Cadvisor](#cadvisor)
 - [Portainer](#portainer)
 
-Nodeexporter does not have a relevant UI and for this reason runs in the backend and is not exposed through Nginx (see [Nodeexport](#nodeexport) paragraph for more details).
+Node Exporter does not have a relevant UI and for this reason runs in the backend and is not exposed through Nginx (see [Node Exporter](#node-exporter) paragraph for more details).
 
 ## Setup and run the environment
 To setup and run the whole stack you need to go through the following steps in the right order: 
@@ -66,19 +66,21 @@ The script delegates to other component specific scripts, which are run in an or
 - Nginx is run with **[nginx-docker-run.sh](nginx/nginx-docker-run.sh)** script
 
 ## Nginx
-[TODO]
+[Nginx](https://www.nginx.com/) is a free, open source HTTP web server, mail proxy server, reverse proxy and load balancer for HTTP, TCP and UDP traffic.
+
+Nginx behavior is defined in a specific configuration file named **[default.conf](default.conf)**, that is copied to the Docker image when it is built.
 
 ## Grafana
-[TODO]
+[Grafana](https://grafana.com/) is an open-source platform for data visualization, monitoring and analysis that has become quite popular as a tool for Observability, allowing to query, visualize, alert on and understand environment metrics no matter where they are stored.
 
 ## Prometheus
-[TODO]
+[Prometheus](https://prometheus.io/) is an open-source system monitoring and alerting toolkit. It is configured via **[prometheus.yml](prometheus/prometheus.yml)** specific configuration file hat is copied to the Docker image when it is built.
 
 ## Cadvisor
-[TODO]
+[cAdvisor](https://github.com/google/cadvisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, histograms of complete historical resource usage and network statistics.
 
-## Nodeexport
-[TODO]
+## Node Exporter
+[Node Exporter](https://github.com/prometheus/node_exporter) is a Prometheus exporter for hardware and OS metrics with pluggable metric collectors.
 
 ## Portainer
-[TODO]
+[Portainer](https://www.portainer.io/) is an open source tool for managing container based applications in Kubernetes, Docker, Docker Swarm, Azure ACI and edge environments. It can be used to simplify and streamline all the tasks needed to manage containers effectively, such as starting, stopping, opening a terminal into the running container, accessing the logs and much more.
