@@ -31,10 +31,10 @@ To run the environment there are few prerequisites that must be met:
 - 1 Docker Volume **PROMETHEUS_DATA_VOLUME** used by Prometheus container to persist its own data
 - 1 Docker Volume **PORTAINER_DATA_VOLUME** used by Portainer container to persist its own data
 
-# 1. Create prerequisites
+### 1. Create prerequisites
 Run **setup.sh** script to create the prerequisites
 
-# 2. Build custom images
+### 2. Build custom images
 Build the custom Docker image
 - run **nginx-docker-build.sh** script to build a custom Nginx image
 
