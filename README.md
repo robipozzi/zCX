@@ -9,7 +9,7 @@
 - [Portainer](#portainer)
 
 ## Introduction
-This repository holds scripts to configure and run monitoring tools for containerized applications on zCX.
+This repository contains scripts to configure and run monitoring tools for containerized applications on zCX.
 
 All the tools are configured to run behind a Reverse Proxy, implemented with Nginx (https://www.nginx.com/), which shields and concentrates the access to several applications, as seen in the architecture diagram below.
 
