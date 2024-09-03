@@ -5,3 +5,5 @@ echo Creating Volumes
 docker volume create GRAFANA_DATA_VOLUME
 docker volume create PROMETHEUS_DATA_VOLUME
 docker volume create PORTAINER_DATA_VOLUME
+
+## doing some tests
